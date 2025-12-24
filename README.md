@@ -6,9 +6,9 @@ Build Organizational Units (OUs) with Terraform.
 
 ```hcl
 module "organizational_units" {
-  source               = "jakebark/organizational_units/aws"
+  source               = "jakebark/organizational-units/aws"
   version              = "0.1.0"
-  root_ou_id           = data.aws_organizations_organization.org.roots[0].id
+  root_ou_id           = data.aws_organizations_organization.this.roots[0].id
   organizational_units = {
    "Workloads" = {
        "Dev" = {}
@@ -27,3 +27,11 @@ module "organizational_units" {
 ## Outputs
 
 - `module.organizational_units.ou_map` 
+
+## Related Resources
+
+- [jakebark/organizational-units/aws](https://registry.terraform.io/modules/jakebark/organizational-units/aws/latest)
+```
+data "aws_organizations_organization" "this" {}
+```
+
