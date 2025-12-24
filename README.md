@@ -24,6 +24,11 @@ module "organizational_units" {
 }
 ```
 
+Root OU id
+```
+data "aws_organizations_organization" "this" {}
+```
+
 ## Outputs
 
 - `module.organizational_units.ou_map` 
@@ -31,7 +36,4 @@ module "organizational_units" {
 ## Related Resources
 
 - [jakebark/organizational-units/aws](https://registry.terraform.io/modules/jakebark/organizational-units/aws/latest)
-```
-data "aws_organizations_organization" "this" {}
-```
 
