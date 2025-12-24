@@ -6,7 +6,7 @@ Build Organizational Units (OUs) with Terraform.
 
 ```hcl
 module "organizational_units" {
-  source               = ""
+  source               = "jakebark/organizational_units/aws"
   version              = "0.1.0"
   root_ou_id           = data.aws_organizations_organization.org.roots[0].id
   organizational_units = {
