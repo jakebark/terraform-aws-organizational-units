@@ -25,7 +25,7 @@ module "organizational_units" {
 ```
 
 Root OU id
-```
+```hcl
 data "aws_organizations_organization" "this" {}
 ```
 
