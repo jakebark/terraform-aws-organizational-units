@@ -1,5 +1,5 @@
 variable "root_ou_id" {
-  description = ""
+  description = "root OU id, eg r-abcd"
   type        = string
 }
 
