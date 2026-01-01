@@ -24,10 +24,6 @@ module "organizational_units" {
 }
 ```
 
-Root OU id
-```hcl
-data "aws_organizations_organization" "this" {}
-```
 
 ## Outputs
 
@@ -37,3 +33,10 @@ data "aws_organizations_organization" "this" {}
 
 - [jakebark/organizational-units/aws](https://registry.terraform.io/modules/jakebark/organizational-units/aws/latest)
 
+Root OU id
+
+```hcl
+data "aws_organizations_organization" "this" {}
+
+data.aws_organizations_organization.this.roots[0].id
+```
